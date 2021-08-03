@@ -1,32 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './tictactoe/tictactoe.css';
-class Square extends React.Component {
 
-  // Delete the `constructor` from Square because Square no longer keeps track of the game's state
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     value: null,
-  //   };
-  // }
-
-  // render() {
-  //   return (
-  //     <button className="square" onClick={ () => this.setState({value: 'X'}) } >
-  //       {this.state.value}
-  //     </button>
-  //   );
-  // }
-
-  render() {
-    return (
-      <button className="square"
-        onClick={() => this.props.onClick()} >
-          {this.props.value}
-      </button>
-    );
-  }
+function Square(props) {
+  return (
+    <button className="square" onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
 }
 
 class Board extends React.Component {
