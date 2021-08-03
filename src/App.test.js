@@ -7,3 +7,7 @@ test('renders learn react link', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
+test('Array check', () => {
+  const _array = [1,2,3];
+  console.log(_array);
+});
